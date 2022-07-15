@@ -2,16 +2,17 @@
 <html>
     <head>
         <meta charset="UFT-8"/>
-        <title>cadastro</title>
+        <title>Cadastro!!</title>
+        <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https: //fonts.googleapis.com/css2? family= Montserrat:wght@500;600 & display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="cadastro.css"/>
+        <link rel="stylesheet" type="text/css" href="../cadastro.css"/>
     </head>
     <body>
 
      <header>
-        <div class="logo"> <img src="01.png" width="100px"/> 
+        <div class="logo"> <img src="01.png" width="200px"/> 
      <picture>
         <source midia="(min-width: 650px)" src="lknlknlknnlknblkn.png">
         <source midia="(min-width: 450px)" src="lknlknlknnlknblkn.png">
@@ -35,12 +36,27 @@
                         <input class="email" type="email" name="email" placeholder="Email">
                         <input class="senha" type="password" name="senha" placeholder="Senha">
                         <input class="cep"   type="text" name="cep" placeholder="CEP">
-                        <input class="localidade" type="text" name="localidade" placeholder="Localidade">
-                        <input class="categoria" type="text" name="categoria" placeholder="Categoria">
-                        <input class="entregador" type="text" name="entregador" placeholder="Entregador">
+                        <select name="categoria" id="categoria">
+                            <option value= "beleza" disabled selected>Beleza</option>
+                            <option value="eletrodomesticos">Elestrodomésticos</option>
+                            <option value="construcao">Construção</option>
+                        </select>
+                        <select name="localidade" id="local">
+                            <optgroup label="Zona Norte">
+                                <option value="casaamarela">Casa Amerela</option>
+                                <option value="casaforte">Casa Forte</option>
+                                <option values="morrodaconceicao">Morro da Conceição</option>
+                            </optgroup>
+                            <optgroup label="Zona Sul">
+                                <option value="boaviagem">Boa Viagem</option>
+                                <option values="pina">Pina</option>
+                            </optgroup>
+                        </select>
                         <br>
-                        <input id="checkbox" type="checkbox" name="privacidade">
-                        <label id="checbox2" for="checkbox">Você aceita nossa política<br>de privacidade</label>
+                        <div class="checkbox" >
+                        <input id="caixa" type="checkbox" name="privacidade">
+                        <label for="checkbox">Você aceita nossa política<br>de privacidade</label>
+                    </div>
                         
                         <button class="cadastro">Cadastrar</button>
                          
