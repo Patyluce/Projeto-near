@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: linear-gradient(#00afef57, white,white,white,#00afef7d);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Histery', sans-serif;
+}
+h3 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    position: absolute;
+    top: 25%;
+    left: 37%;
+}
+
+#texto{
+        position: relative;
+        top: -500px;
+        left: 0;
+}
+button{
+    color:black;
+}
+a{
+        color: black;
+        text-decoration: none;
+}
+#txt1{
+    font-family: Quicksand;
+    position: absolute;
+    text-align: center;
+    top: 165%;
+    left: 46.5%;
+    font-size: 20px;
+}
+
+#txt2{
+    font-family: Quicksand;
+    position: absolute;
+    text-align: center;
+    top: 170%;
+    left: 31%;
+    font-size: 20px;
+} 
+#btt1{     
+    background-color: Transparent;
+    border: 1px solid #8795a2;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 23px;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 10px;
+    cursor: pointer;
+    flex: 0 0 auto;
+    margin-bottom: 0px;
+    border-radius: 30px;
+    flex-direction: row-reverse;
+    height: auto;
+    position: relative;
+    left: 15%;
+    top: 200%;
+}
+#btt2{
+    background-color: Transparent;
+    border: 1px solid #8795a2;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 15px;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 10px;
+    cursor: pointer;
+    flex: 0 0 auto;
+    margin-bottom: 0px;
+    border-radius: 15px;
+    flex-direction: row-reverse;
+    height: auto;
+    left: -2%;
+    position: relative;
+    top: 200%;
+}
+img{
+    left: 33%;
+    width: 17%;
+    top: 90px;
+    position: relative;
+}
+a:hover{
+    opacity: 0.7;
+}
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;   
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    height: 8vh;
+}
+.search-box{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    background:#ffffff;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px;
+    border-style:solid;
+    border-width:thin;
+}
+.search-btn{
+    color: rgb(0, 0, 0);
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    background:rgba(109, 109, 109, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:all 0.5s;
+}
+.search-txt{
+    border: none;
+    background:none;
+    outline: none;
+    float: left;
+    padding: 0;
+    columns: white;
+    font-size: 16px;
+    transition:all 0.5s;
+    line-height: 40px;
+    width: 0px;
+}
+.search-box:hover > .search-txt{
+    width: 240px;
+    padding: 0 6px;
+}
+.search-box:hover > .search-btn{
+    background: white;
+}
+.search-box:hover{
+    border-style:solid;
+}
+main{
+    background:url("logo.png") no-repeat
+    center center;
+    background-size: cover;
+    height: 130vh;
+}
+
+#btnBusca{
+    background-color:#2F4F4F;
+    border:solid 1px;
+    border-radius:15px;
+    width:50px;
+  }
+  
+#txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:260px;
+    background-color:#2F4F4F;
+  }
+
+#textoprincipal {
+    margin-left: 75px;
+}
+
+#texto {
+    margin-top: -45px;
+    margin-left: -25px;
+}
+#logomaior {
+    left: 30%;
+    width: 40%;
+    top: 550px;
+    position: relative;
+}
+pre {
+    display: block;
+    font-family: 'Quicksand';
+    white-space: pre;
+    margin: 1em 0px;
+}
