@@ -1,0 +1,148 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family:Quicksand;
+}
+
+.navbar {
+    background:linear-gradient(90deg,#00AFEF,#00AFEF,#0480E6,#0573E4 );
+    padding: 0.75%;
+    box-shadow:
+    0 2.8px 2.2px rgba(211, 211, 211, 0.034),
+    0 6.7px 5.3px rgba(209, 209, 209, 0.048),
+    0 12.5px 10px rgba(183, 183, 183, 0.6),
+    0 22.3px 17.9px rgba(156, 156, 156, 0.072),
+    0 41.8px 33.4px rgba(160, 160, 160, 0.086),
+    0 100px 80px rgba(165, 165, 165, 0.12);
+}
+
+.navbar img {
+    position: relative;
+    top: 10px;
+    display: flex;
+    max-width: 800px;
+    flex-wrap: wrap;
+}
+
+.navbar button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    font-family: Quicksand;
+    position: relative;
+    left: 65%;
+    margin-left: 50px;
+    top: -55px;
+    color: white;
+    width: 150px;
+    height: 55px;
+    transition: 0.5s;
+}
+
+.logado {
+
+	display:flex;
+	flex-direction:row;
+	position:absolute;
+	left: 65%;
+	top: 10%
+	
+}
+
+.navbar button:hover{
+    border-radius: 10px;
+    background-color: rgba(3, 3, 3, 0.4);
+}
+
+.principal img {
+    position: relative;
+    top: 60px;
+    left: 17%;
+}
+
+pre {
+    font-family: Quicksand;
+    font-size: 20px;
+}
+
+.search-box{
+    position: absolute;
+    top: 46%;
+    left: 65%;
+    transform: translate(-50%,50%);
+    background:#ffffff;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px;
+    border-style:solid;
+    border-width:thin;
+}
+.search-btn{
+    color: rgb(0, 0, 0);
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    background:rgba(109, 109, 109, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:all 0.5s;
+    cursor: pointer;
+}
+.search-txt{
+    border: none;
+    background:none;
+    outline: none;
+    float: left;
+    padding: 0;
+    columns: white;
+    font-size: 16px;
+    transition:all 0.5s;
+    line-height: 40px;
+    width: 0px;
+}
+.search-box:hover > .search-txt{
+    width: 240px;
+    padding: 0 6px;
+}
+.search-box:hover > .search-btn{
+    background: white;
+}
+.search-box:hover{
+    border-style:solid;
+}
+
+footer {
+    background:linear-gradient(90deg,#00AFEF,#00AFEF,#0480E6,#0573E4 );
+    padding: 0.75%;
+    position: relative;
+    top: 200px; 
+    font-size: 25px;
+}
+
+footer pre {
+    color: white;
+}
+
+#textoprincipal {
+    position: relative;
+    top: -550px;
+    margin-left: 1080px;
+    font-size: 25px;
+}
+
+#texto {
+    position: relative;
+    top: -330px;
+    margin-left: 1080px;
+    font-size: 25px;
+}
+
+#bairros{
+	display: none;
+}

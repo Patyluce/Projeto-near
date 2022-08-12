@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Loja</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" href="../css/loja.css">
+        <script src="https://kit.fontawesome.com/d03c934c7f.js" crossorigin="anonymous"></script>
+        <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    </head>
+    <body>
+        <header id="navbar">
+            <img src="../img/logo branca 01.png" width="200">
+            <main>
+            <div class="search-box">
+                	<input class="search-txt" type="text" name="" placeholder="O que está procurando"/>
+                	<a class="search-btn" href="#">
+                    <i class="fas fa-search"></i></a>
+                </div>
+            </main>
+        </header>
+        <div class="infobox">
+        <fieldset th:each=" loja : ${dadosloja}">
+            <table  class="loja">
+            
+            	<tr>
+            		<td>Nome:</td>
+            		<td th:text="${loja.nome}"></td>
+            	</tr>
+            	<tr>
+            		<td>Cep:</td>
+            		<td th:text="${loja.cep}"></td>
+            	</tr>
+            	<tr>
+            		<td>Categoria:</td>
+            		<td th:text="${loja.categoria}"></td>
+            	</tr>
+            	<tr>
+            		<td>Bairro:</td>
+            		<td th:text="${loja.bairro}"></td>
+          		</tr>
+            </table>
+            <a th:href="@{editar/{id}(id=${loja.id})}" class="editar" id="editar-loja">Editar Perfil</a>
+             <div>
+        		<a th:href="@{/produto/{id}(id=${idLoja})}" class="editar" id="produto">Adicionar Produto</a>
+        	</div>
+        </fieldset>
+        
+        </div>
+        
+        
+        
+        <div class="page">
+            <fieldset id="camisa" th:each="produto:${dadosproduto}"> 
+                <h2 th:text="${produto.nome}"></h2>
+                <h2 th:text="${produto.valor}"></h2>
+                <h2 th:text="${produto.descricao}"></h2>
+                <a th:href="@{/produto/editar/{id}(id=${produto.idproduto})}" class="editar op-produto">Editar</a>
+                <a th:href="@{/produto/deletar/{id}(id=${produto.idproduto})}" class="deletar op-produto">Deletar</a>
+            </fieldset>
+        </div>
+        
+           
+        
+        
+        <a href="/"><button class="botao"type="submit"> &#x21A9;<strong>Voltar</strong></button></a>
+    </body>
+</html>
