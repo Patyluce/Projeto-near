@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d03c934c7f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/css/categoria.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+
+    <title>Busca!!</title>
+</head>
+<body>
+    <header>
+	<form>
+        <div class="search-box">
+            <input class="search-txt" type="text" name="" placeholder="O que está procurando"/>
+            <a class="search-btn" href="#">
+                <i class="fas fa-search"></i></a>
+
+            </div>
+             <img src="/img/logo branca 01.png" alt="logo" width="200">
+             
+      </form>       
+    </header>
+   
+   <div id="campo" class="check">
+       <fieldset class="menu-categoria">
+        <h1><strong>Categoria</strong></h1>
+        <br> 
+  	<form  method="post" action="categoria" >
+  	<ul>
+  		<li><input type="hidden" th:value="${Bairro}" name="bairro"></li>
+    	<li><input type="submit" value="Eletronicos" name="categoria" ></li>
+    	<li><input type="submit" value="Varejo" name="categoria" ></li>
+    	<li><input type="submit" value="Beleza" name="categoria" ></li>
+    	<li><input type="submit" value="Eletrodomesticos" name="categoria" ></li>
+    	<li><input type="submit" value="Automoveis" name="categoria" ></li>
+    	<li><input type="submit" value="Construção" name="categoria" ></li>
+    </ul>
+    </form>
+    </fieldset> 
+</div>
+
+     <div th:each="loja:${listaLoja}" class="lojas"> 
+     	<fieldset class="foto-loja">
+     		<a th:href="@{/loja/{id}(id=${loja.id})}">
+     		<h2 th:text="${loja.nome}" class="nome"></h2>
+     		<h2 th:text="${loja.cep}" class="desc"></h2>
+     		<h2 th:text="${loja.categoria}" class="desc"></h2>
+     		<h2 th:text="${loja.bairro}" class="desc"></h2>
+     		</a>
+     	</fieldset>
+    </div> 
+    <a href="/"><button class="botao"type="submit">&#x21A9;Voltar</button></a>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Tela Inicial Near</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link href="css/home.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Quicksand'
+	rel='stylesheet'>
+<script src="https://kit.fontawesome.com/d03c934c7f.js"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<header class="navbar">
+		<img src="img/logo branca 01.png" width="300">
+
+		<div th:if="${session.isEmpty()}">
+			<a href="login"><button name="login" type="submit"><strong>Entrar</strong></button></a> 
+			<a href="cadastro"><button name="cadastro" type="submit"><strong>Cadastro</strong></button></a>
+		</div>
+		<div th:unless="${session.isEmpty()}" class="logado">
+
+			<form th:action="@{/loja}" method="get">
+				
+				<button type="submit"><strong>Minha Loja</strong></button>
+			
+			</form>
+			
+			<form th:action="@{/deslogar}" method="post">
+				
+				<button type="submit" ><strong>Deslogar</strong></button>
+			
+			</form>
+		</div>
+
+
+	</header>
+	
+		<div class="principal">
+		<img src="img/logomaior.png" width="600">
+		
+	<form action="buscar" method="post">
+		<div class="search-box">
+			<input class="search-txt" type="text" name="buscar"
+				placeholder="O que está procurando"/> <button class="search-btn"
+				type="submit"> <i class="fas fa-search"></i>
+			</button>
+		</div>
+	</form>
+		
+		
+		
+		
+		
+		
+		<h3 id="textoprincipal">
+			Bem vindo ao near, aqui você encontra <br> loja que procura
+			pertinho de você.
+		</h3>
+		<h3 id="texto">
+			Procure pela seu bairro e ache a loja <br> mais próxima de você
+		</h3>
+	</div>
+	<footer>
+		<pre>
+            <strong>
+        Por que criamos o site Near ? 
+    
+        Nós, criadores do Near, percebemos que é difícil encontrar um produto mais perto de onde você esteja. 
+        Afinal, toda pessoa já vivenciou o momento de : -Poxa, poderia ter comprado naquela loja, era bem mais perto.... 
+        Pensando nisso, queríamos trazer mais praticidade. 
+        Então, construímos o Near que concentra várias lojas e 
+        o usuário encontrará o produto mais perto de onde esteja e ainda pode comparar os preços. 
+        Não perca tempo! Navegue e encontre o que precisa.
+        </strong>
+            </pre>
+	</footer>
+</body>
+</html>
