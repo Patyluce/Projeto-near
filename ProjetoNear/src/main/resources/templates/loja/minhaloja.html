@@ -21,9 +21,11 @@
             </main>
         </header>
         <div class="infobox">
-        <fieldset th:each=" loja : ${dadosloja}">
+        <fieldset th:each=" loja:${dadosloja}">
             <table  class="loja">
-            
+            	
+            	<img th:src="@{/img/{imagem}(imagem=${loja.imagem_name})}" width="150">
+            	
             	<tr>
             		<td>Nome:</td>
             		<td th:text="${loja.nome}"></td>
@@ -41,7 +43,7 @@
             		<td th:text="${loja.bairro}"></td>
           		</tr>
             </table>
-            <a th:href="@{editar/{id}(id=${loja.id})}" class="editar" id="editar-loja">Editar Perfil</a>
+            <a th:href="@{editar/{id}(id=${loja.id})}" class="editar" id="editar-loja">Editar Loja</a>
              <div>
         		<a th:href="@{/produto/{id}(id=${idLoja})}" class="editar" id="produto">Adicionar Produto</a>
         	</div>

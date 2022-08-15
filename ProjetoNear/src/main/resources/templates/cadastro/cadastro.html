@@ -28,11 +28,23 @@
                 <br>
                 <div class="login">
                     <form method="post" action="cadastro/confirmar" th:object="${cadastro}" enctype="multipart/form-data">
+                    	
+                    	<input class="razaosocial" type="file" name="imagem">
+                    
                         <input class="razaosocial" type="text" th:field="*{nome}" placeholder="Nome">
+                        <div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></div>
+                        
                         <input class="Cnpg"   type="text" name="cnpj" th:field="*{cnpj}" placeholder="CNPJ">
+                        <div th:if="${#fields.hasErrors('cnpj')}" th:errors="*{cnpj}"></div>
+                        
                         <input class="email" type="email" name="email" th:field="*{email}" placeholder="Email">
+                        <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+                        
                         <input class="senha" type="password" name="senha" th:field="*{senha}" placeholder="Senha">
+                        <div th:if="${#fields.hasErrors('senha')}" th:errors="*{senha}"></div>
+                        
                         <input class="cep"   type="text" name="cep" th:field="*{cep}" placeholder="CEP">
+                        <div th:if="${#fields.hasErrors('cep')}" th:errors="*{cep}"></div>
                         
                         <select name="categoria" id="categoria" th:field="*{categoria}">
                             <option value="Beleza">Beleza</option>
@@ -42,7 +54,9 @@
                             <option value="Construcao">Construção</option>
                             <option value="Automoveis">Automoveis</option>
                             
+                            
                         </select>
+                        <div th:if="${#fields.hasErrors('categoria')}" th:errors="*{categoria}"></div>
                         <select name="bairro" id="categoria" th:field="*{bairro}">
                                 <option value="Casa Amarela">Casa Amerela</option>
                                 <option value="Casa Forte">Casa Forte</option>
@@ -51,6 +65,7 @@
                                 <option value="Pina">Pina</option>
                          
                         </select>
+                        <div th:if="${#fields.hasErrors('bairro')}" th:errors="*{bairro}"></div>
 <!--                         <input class="cep"  type="file" name="imagem" > -->
                         <br>
                         <input id="checkbox" type="checkbox" name="privacidade">
