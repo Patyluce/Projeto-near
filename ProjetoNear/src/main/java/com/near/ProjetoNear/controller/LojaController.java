@@ -221,10 +221,6 @@ public class LojaController {
 	@PostMapping("/produto/editar/confirmar")
 	public ModelAndView editarProduto (Produto prod) {
 		ModelAndView mv = new ModelAndView();
-		System.out.println(prod.getIdproduto()+" Cheguei AQ 1");
-		System.out.println(prod.getNome()+" Cheguei AQ 2");
-		System.out.println(prod.getValor()+" Cheguei AQ 3");
-		System.out.println(prod.getDescricao()+" Cheguei AQ 4");
 		pr.editarProduto(prod.getNome(), prod.getValor(), prod.getDescricao(), prod.getIdproduto());
 		mv.setViewName("redirect:/loja");
 		return mv;
