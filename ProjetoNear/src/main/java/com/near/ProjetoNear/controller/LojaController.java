@@ -59,12 +59,6 @@ public class LojaController {
 			return cadastroLoja(cadastro);
 		}
 		
-//		try {
-//			cadastro.setImagem(arquivo.getBytes());
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-		
 		ModelAndView mv = new ModelAndView();
 		serviceLoja.salvarLoja(cadastro);
 		mv.setViewName("redirect:/login");
@@ -236,7 +230,16 @@ public class LojaController {
 		return mv;
 	}
 	
+	/* Área de Testes */
 	
-	
+	@PostMapping("/imagem")
+	public ModelAndView imagem(@RequestParam("imagem")Multipartfile imagem, Loja loja){
+	ModelAndView mv = new ModelAndView();
+		imagem.transferTo("caminho"+imagem.getOriginalName())
+		loja.setImagem(imagem.getOriginalName());
+		System.out.println(imagem.getImagem);
+		mv.setViewName("loja/loja");
+		return mv;
+	}
 
 }
