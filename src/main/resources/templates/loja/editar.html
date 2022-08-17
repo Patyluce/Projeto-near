@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+        <meta charset="utf-8"/>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Editar Perfil!!</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="/css/cadastro.css"/>
+    </head>
+<body>
+
+<header>
+        <div class="logo"> <img src="/img/logo.png" width="200px"> </div>          
+        </header>
+        <header>       
+            <section class="container">
+                <div class="info">
+                <div class="frase">Edite seu Perfil</div>
+                </div>
+               </section>
+               <section class="area-login">
+                <br>
+                <br>
+                <br>
+			<div class="login">
+	<form action="confirmar" method="post" th:object="${loja}" enctype="multipart/form-data">
+		
+		<input type="text" name="nome" placeholder="Nome" class="razaosocial" th:field=*{nome}>
+		<input readonly="readonly" name="cnpj" placeholder="CNPJ" class="razaosocial" th:field="*{cnpj}">
+		<input readonly="readonly" name="email" placeholder="Email" class="razaosocial" th:field="*{email}">
+		<input readonly="readonly" type="hidden" name="senha" placeholder="Senha" class="razaosocial" th:field="*{senha}">
+		<input type="text" name="cep" placeholder="CEP" class="razaosocial" th:field=*{cep}>
+		
+		<select name="categoria" th:field=*{categoria}>
+			<option value="Beleza">Beleza</option>
+            <option value="Eletrodomesticos">Elestrodomésticos</option>
+            <option value="Varejo">Varejo</option>
+            <option value="Eletronicos">Eletronicos</option>
+            <option value="Construcao">Construção</option>
+            <option value="Automoveis">Automoveis</option>
+		</select>
+		
+		<select name="bairro" th:field=*{bairro}>
+			<option value="Casa Amarela">Casa Amerela</option>
+            <option value="Casa Forte">Casa Forte</option>
+            <option value="Morro da Conceicao">Morro da Conceição</option>
+            <option value="Boa Viagem">Boa Viagem</option>
+            <option value="Pina">Pina</option>
+		</select>
+		
+		<input type="file" name="file" class="razaosocial">
+		
+		<button type="submit" class="cadastro"> Confirmar</button></form>
+	</div>
+	</section>
+</header>
+
+<section class="banner">
+    <div class="banner--imagens">
+        <img src="/img/local.png" width="650px">
+    </div>
+
+     </section>
+        ...
+     <footer>
+       <a href="/loja"><button class="botao"type="submit">&#x21A9;Voltar</button></a>
+     </footer>	
+</body>
+</html>
