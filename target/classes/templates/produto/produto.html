@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Produto!!</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="/css/cadastro.css"/>
+    </head>
+    <body>
+
+     <header>
+        <div class="logo"> <img src="/img/logo.png" width="200px"> </div>          
+        </header>
+
+        <header>       
+            <section class="container">
+                <div class="info">
+                <div class="frase">Adicione seu Produto</div>
+                </div>
+               </section> 
+             <section class="area-login">
+                <br>
+                <br>
+                <br>
+                <div class="login">
+                    <form method="post" action="cadastrar" th:object="${produto}" enctype="multipart/form-data">
+                    	<input type="hidden" th:value="${produto.idloja}" th:field="*{idloja}">
+                        <input class="razaosocial" type="text" th:field="*{nome}" placeholder="Nome" maxlength="100">
+                        <input class="Cnpg"   type="text"  th:field="*{valor}" placeholder="Valor">
+                        <input class="email" id="descricao" type="text" th:field="*{descricao}" placeholder="Descricao" maxlength="100">
+                   
+                        <br>
+                           
+                        <button type="submit" class="cadastro">Cadastrar</button>
+                         
+                    </form>
+                    
+                </div>
+            </div>
+          </section> 
+    </header>
+     <section class="banner">
+    <div class="banner--imagens">
+        <img src="/img/local.png" width="650px">
+    </div>
+
+     </section>
+        ...
+     <footer>
+       <a href="/loja"><button class="botao"type="submit">&#x21A9;Voltar</button></a>
+     </footer>
+    
+</body>
+</html>
